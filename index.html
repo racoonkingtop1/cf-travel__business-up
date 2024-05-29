@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>MaxGraph New Site</title>
+  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="datepicker.material.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/css/intlTelInput.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>
+  <script defer src="./datepicker.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body class="page__body">
+    <div class="site-container">
+      <header class="header">
+  <div class="header__container container">
+    <a href="index.html" class="header__logo">
+      <img src="./img/logo_header.svg" alt="лого">
+    </a>
+    <div class="header__btns">
+      <div class="header__socials">
+        <a href="" class="btn btn--white btn--circle">
+          <svg width="24" height="24">
+            <use xlink:href="./img/sprite.svg#icon_wa"></use>
+          </svg>
+        </a>
+        <a href="" class="btn btn--white btn--circle">
+          <svg width="24" height="24">
+            <use xlink:href="./img/sprite.svg#icon_tg"></use>
+          </svg>
+        </a>
+      </div>
+      <button class="btn btn--white btn--smaller">Перезвоните мне</button>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="top-block section" style="background-image: url(./img/image.webp);">
+    <div class="top-block__container container">
+        <div class="top-block__advantages">
+            <p class="top-block__advantage">Проведите незабываемое время с семьёй и друзьями</p>
+            <p class="top-block__advantage">Исследуйте <br>лесные тропы <br>и поля</p>
+            <p class="top-block__advantage">Насладитесь скоростью и адреналином</p>
+        </div>
+        <div class="top-block__intro">
+            <h1>Квадро-туризм <br>в Липецкой и Воронежкой областях от 7 500 ₽</h1>
+            <button class="btn">подобрать маршрут</button>
+        </div>
+    </div>
+</section>
+      <section class="advantages section">
+    <div class="advantages__container container">
+        <div class="advantages__cards">
+            <div class="advantages__item">
+                <span>01</span>
+                <p>Безопасные авторские маршруты</p>
+                <img src="./img/image2.webp" alt="">
+            </div>
+            <div class="advantages__item">
+                <span>02</span>
+                <p>Опытные инструкторы</p>
+                <img src="./img/image.webp" alt="">
+            </div>
+            <div class="advantages__item">
+                <span>03</span>
+                <p>Трассы разного уровня сложности</p>
+                <img src="./img/image2.webp" alt="">
+            </div>
+            <div class="advantages__item">
+                <span>04</span>
+                <p>Мощная современная техника</p>
+                <img src="./img/image.webp" alt="">
+            </div>
+            <div class="advantages__item">
+                <span>05</span>
+                <p>Полная экипировка для катания</p>
+                <img src="./img/image2.webp" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+      <section class="quiz section">
+    <div class="quiz__container container">
+        <h2 class="page-title">Подберите <span class="orange">за 1 минуту</span> подходящий маршрут и узнайте стоимость</h2>
+
+        <div class="quiz__content">
+            <form class="swiper quiz__swiper quiz__forms">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper quiz__swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="quiz__slide swiper-slide">
+                    <div class="quiz__form">
+                        <h3>Ознакомьтесь <br>и выберите маршрут</h3>
+                        <div class="quiz-form">
+                            <label class="quiz-form__item quiz-way-radio checkbox-label">
+                                <input type="radio" name="quiz-way">
+                                <span>1. Маршрут «По следам истории»</span>
+                            </label>
+                            <label class="quiz-form__item quiz-way-radio checkbox-label">
+                                <input type="radio" checked name="quiz-way">
+                                <span>2. Маршрут «Зелёное кольцо»</span>
+                            </label>
+                            <label class="quiz-form__item quiz-way-radio checkbox-label">
+                                <input type="radio" name="quiz-way">
+                                <span>3. Маршрут «Тайные тропы»</span>
+                            </label>
+                            <label class="quiz-form__item quiz-way-radio checkbox-label">
+                                <input type="radio" name="quiz-way">
+                                <span>4. Маршрут «В поисках приключений»</span>
+                            </label>
+                        </div>
+                        <div class="quiz-form__btns">
+                            <!-- If we need navigation buttons -->
+                            <button class="quiz__next btn" type="button">
+                                Следующий шаг
+                                <svg width="16" height="16">
+                                    <use xlink:href="./img/sprite.svg#icon_arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="quiz__slide swiper-slide">
+                      <div class="quiz__form">
+                        <h3>Выберите дату и время</h3>
+                        <div class="quiz-form">
+                            <input type="text" id="datepicker" class="quiz-form__datepicker" autocomplete="off">
+                        </div>
+                        <label class="quiz__timepicker">
+                            <span>Выберите время <span class="orange">*</span></span>
+                            <input id="timepicker" type="text" minlength="5" maxlength="5" placeholder="Впишите удобное время">
+                        </label>
+                        <div class="quiz-form__btns">
+                            <!-- If we need navigation buttons -->
+                            <button class="quiz__prev btn btn--transparent" type="button">
+                                <svg width="16" height="16">
+                                    <use xlink:href="./img/sprite.svg#icon_arrow"></use>
+                                </svg>
+                                Назад
+                            </button>
+                            <button class="quiz__next btn" type="button">
+                                Следующий шаг
+                                <svg width="16" height="16">
+                                    <use xlink:href="./img/sprite.svg#icon_arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="quiz__slide swiper-slide">
+                    <div class="quiz__form">
+                        <h3>Какие дополнительные услуги вам понадобятся?</h3>
+                        <div class="quiz-form">
+                            <label class="quiz-form__item checkbox-label">
+                                <input type="checkbox" name="quiz-way">
+                                <span>Доставку до места старта на маршрут</span>
+                            </label>
+                            <label class="quiz-form__item checkbox-label">
+                                <input type="checkbox" name="quiz-way">
+                                <span>Фотосессия на маршруте</span>
+                            </label>
+                            <label class="quiz-form__item checkbox-label">
+                                <input type="checkbox" name="quiz-way">
+                                <span>Организация питания</span>
+                            </label>
+                            <label class="quiz-form__item checkbox-label">
+                                <input type="checkbox" name="quiz-way">
+                                <span>Спец одежда</span>
+                            </label>
+                            <label class="quiz-form__item checkbox-label">
+                                <input type="checkbox" name="quiz-way">
+                                <span>Маршрут с водителем</span>
+                            </label>
+                        </div>
+                        <div class="quiz-form__btns">
+                            <!-- If we need navigation buttons -->
+                            <button class="quiz__prev btn btn--transparent" type="button">
+                                <svg width="16" height="16">
+                                    <use xlink:href="./img/sprite.svg#icon_arrow"></use>
+                                </svg>
+                                Назад
+                            </button>
+                            <button class="quiz__next btn" type="button">
+                                Следующий шаг
+                                <svg width="16" height="16">
+                                    <use xlink:href="./img/sprite.svg#icon_arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="quiz__slide swiper-slide">
+                    <div class="quiz__form">
+                        <h3>Количество человек и квадроциклов</h3>
+                        <div class="quiz-form">
+                            <p class="quiz-additional">
+                                <span class="orange">*</span>
+                                На 1 квадроцикле помещаются 2 человека: вы можете поехать вдвоём или для каждого забронировать отдельно.
+                            </p>
+                            <p class="quiz-additional">
+                                <span class="orange">**</span>
+                                Предусмотрен маршрут с водителем, где за рулём будет сидеть опытный водитель (инструктор)
+                            </p>
+                            <div class="quiz-form__item count-label">
+                                <label for="quiz-count1">Количество человек:</label>
+                                <div class="count-label__input">
+                                    <button class="count-prev">
+                                        <img src="./img/svg/minus.svg" alt="иконка минуса">
+                                    </button>
+                                    <input type="number" readonly value="1" min="1" max="99" name="quiz-count1">
+                                    <button class="count-next">
+                                        <img src="./img/svg/plus.svg" alt="иконка плюса">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="quiz-form__item count-label">
+                                <label for="quiz-count2">Количество квадроциклов:</label>
+                                <div class="count-label__input">
+                                    <button class="count-prev">
+                                        <img src="./img/svg/minus.svg" alt="иконка минуса">
+                                    </button>
+                                    <input type="number" readonly value="1" min="1" max="99" name="quiz-count2">
+                                    <button class="count-next">
+                                        <img src="./img/svg/plus.svg" alt="иконка плюса">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="quiz-form__item count-label">
+                                <label for="quiz-count3">Количество водителей (инструкторов):</label>
+                                <div class="count-label__input">
+                                    <button class="count-prev">
+                                        <img src="./img/svg/minus.svg" alt="иконка минуса">
+                                    </button>
+                                    <input type="number" readonly value="1" min="1" max="99" name="quiz-count3">
+                                    <button class="count-next">
+                                        <img src="./img/svg/plus.svg" alt="иконка плюса">
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="quiz-form__btns">
+                            <!-- If we need navigation buttons -->
+                            <button class="quiz__prev btn btn--transparent" type="button">
+                                <svg width="16" height="16">
+                                    <use xlink:href="./img/sprite.svg#icon_arrow"></use>
+                                </svg>
+                                Назад
+                            </button>
+                            <button class="quiz__next btn" type="button">
+                                Следующий шаг
+                                <svg width="16" height="16">
+                                    <use xlink:href="./img/sprite.svg#icon_arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="quiz__slide swiper-slide">
+                    <div class="quiz__form">
+                        <h3>Выберите модель квадроцикла</h3>
+                        <div class="quiz-form">
+                            <label class="quiz-form__item checkbox-label">
+                                <input type="radio" name="quiz-vehicle">
+                                <span>Квадроцикл CF MOTO X6 EFI — 38 л.с</span>
+                            </label>
+                            <label class="quiz-form__item checkbox-label">
+                                <input type="radio" name="quiz-vehicle">
+                                <span>Квадроцикл CF MOTO X8 EFI — 63л.с.</span>
+                            </label>
+                            <label class="quiz-form__item checkbox-label">
+                                <input type="radio" name="quiz-vehicle">
+                                <span>Квадроцикл CFMOTO CFORCE 1000 EPS NEW — 90 л. с. </span>
+                            </label>
+                        </div>
+                        <div class="vehicle-img">
+                            <img src="./img/image.webp" alt="картинка квадроцикла" class="vehicle-img__img">
+                        </div>
+                        <div class="quiz-form__btns">
+                            <!-- If we need navigation buttons -->
+                            <button class="quiz__prev btn btn--transparent" type="button">
+                                <svg width="16" height="16">
+                                    <use xlink:href="./img/sprite.svg#icon_arrow"></use>
+                                </svg>
+                                Назад
+                            </button>
+                            <button class="quiz__next quiz__open-cards btn" type="button">
+                                Следующий шаг
+                                <svg width="16" height="16">
+                                    <use xlink:href="./img/sprite.svg#icon_arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="quiz__slide swiper-slide">
+                    <div class="quiz__form">
+                        <h3>Куда с вами удобнее связаться, чтобы забронировать маршрут?</h3>
+                        <div class="quiz-form">
+                            <label class="quiz-form__item checkbox-label">
+                                <input type="radio" name="quiz-callback">
+                                <span>WhatsApp</span>
+                            </label>
+                            <label class="quiz-form__item checkbox-label">
+                                <input type="radio" name="quiz-callback">
+                                <span>Telegram</span>
+                            </label>
+                            <label class="quiz-form__item checkbox-label">
+                                <input type="radio" name="quiz-callback">
+                                <span>Перезвоните мне, у меня остались вопросы</span>
+                            </label>
+                        </div>
+                        <div class="quiz__contacts">
+                            <label class="common-label">
+                                <p><span class="orange">*</span> Введите ваше имя</p>
+                                <input type="text" placeholder="Имя">
+                            </label>
+                            <label class="common-label">
+                                <p><span class="orange">*</span> Введите ваш телефон</p>
+                                <input type="tel" id="phonephone">
+                            </label>
+                            <label class="verify-label">
+                                <input type="checkbox">
+                                <span>Даю свое согласие на обработку персональных данных</span>
+                            </label>
+                        </div>
+                        <div class="quiz-form__btns">
+                            <!-- If we need navigation buttons -->
+                            <button class="quiz__prev quiz__open-cards btn btn--transparent" type="button">
+                                <svg width="16" height="16">
+                                    <use xlink:href="./img/sprite.svg#icon_arrow"></use>
+                                </svg>
+                                Назад
+                            </button>
+                            <button class="quiz__next quiz__final btn" type="button">
+                                Забронировать маршрут
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="quiz__slide swiper-slide">
+                    <div class="quiz__form">
+                        <h3>Спасибо за заявку, мы с вами свяжемся в ближайшее время!</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="quiz__pagination-block">
+                    <p class="pagination__texts">Осталось <span class="quiz__count"></span> из 6</p>
+                    <!-- If we need pagination -->
+                    <div class="quiz__pagination swiper-pagination"></div>
+                </div>
+            </form>
+            <div class="quiz__info">
+              <img src="./img/image.webp" id="map" class="quiz__map"></img>
+              <div class="quiz-info quiz-info--1">
+                  <h4>Маршрут «Зелёное кольцо»</h4>
+                  <div class="quiz-info__item">
+                      <img src="./img/svg/icon_clock.svg" alt="">
+                      <p>
+                          <b>Продолжительность:</b>
+                          1 час
+                      </p>
+                  </div>
+                  <div class="quiz-info__item">
+                      <img src="./img/svg/icon_rub.svg" alt="">
+                      <p>
+                          <b>Стоимость:</b>
+                          от 4000 рублей
+                      </p>
+                  </div>
+                  <div class="quiz-info__item">
+                      <p>
+                          <b>Сложность:</b>
+                          Маршрут низкой сложности
+                      </p>
+                  </div>
+                  <div class="quiz-info__item">
+                      <p>
+                          <b>О маршруте:</b><br>
+                          Вас ждёт захватывающий участок через поля, виражи по лесному массиву, вы прокатитесь вдоль водохранилища, а незабываемая красота местной природы пробудит непередаваемое чувство свободы.
+                      </p>
+                  </div>
+                  <div class="quiz-info__item">
+                      <p>
+                          <b>Одежда:</b><br>
+                          Одевайтесь по погоде в удобную одежду и обувь, которую не страшно замарать. Желательно не белая, не маркая.
+                      </p>
+                  </div>
+                  <div class="quiz-info__item">
+                      <p>
+                          <b>Взять с собой:</b><br>
+                          Паспорт и водительское удостоверение (если маршрут с водителем — права не нужны). Ребёнок — свид-во о рождении
+                      </p>
+                  </div>
+                  <div class="quiz-info__item">
+                      <p>
+                          <b>Выдаётся на месте:</b><br>
+                          Защитная экипировка: подшлемник; шлем; защитные очки; перчатки; непромокаемый костюм (куртка и брюки)
+                      </p>
+                  </div>
+                  <div class="quiz-info__item">
+                      <p>
+                          <b>Ограничения:</b><br>
+                          Для управления квадроциклом допускаются лица достигшие 16 летнего возраста. До 18 лет, требуется сопровождение взрослого.
+                      </p>
+                  </div>
+                  <div class="quiz-info__item">
+                      <p>
+                          <b>Грузоподьёмность:</b>
+                          Вес человека до 150 кг
+                      </p>
+                  </div>
+                  <div class="quiz-info__item">
+                      <p>
+                          <b>Точка сбора:</b>
+                          Указать для каждого маршрута локально
+                      </p>
+                  </div>
+              </div>
+              <div class="quiz-info quiz-info--2 dnone">
+                <h5>Информация о бронировании:</h5>
+                <div class="quiz-info__item">
+                    <img src="./img/svg/icon_way.svg" alt="">
+                    <p>
+                        <b>Маршрут:</b>
+                        <span class="booked-way">Зелёное кольцо</span>
+                    </p>
+                </div>
+                <div class="quiz-info__item">
+                    <img src="./img/svg/icon_date.svg" alt="">
+                    <p>
+                        <b>Дата:</b>
+                        <span id="booked-date">--.--.----</span>
+                    </p>
+                </div>
+                <div class="quiz-info__item">
+                    <img src="./img/svg/icon_clock.svg" alt="">
+                    <p>
+                        <b>Время:</b>
+                        <span class="booked-time">12:00</span>
+                    </p>
+                </div>
+                <div class="quiz-info__item">
+                    <img src="./img/svg/icon_add.svg" alt="">
+                    <p>
+                        <b>Дополнительные услуги:</b>
+                    </p>
+                    <ul class="quiz-extra booked-extras">
+                        <li class="quiz-extra__item">Доставку до места старта на маршрут</li>
+                        <li class="quiz-extra__item">Организация питания</li>
+                    </ul>
+                </div>
+                <div class="quiz-info__item">
+                    <img src="./img/svg/icon_add.svg" alt="">
+                    <p>
+                        <b>Количество человек и квадроциклов:</b>
+                    </p>
+                    <ul class="quiz-extra">
+                        <li class="quiz-extra__item">Количество человек: <span class="booked-people">1</span></li>
+                        <li class="quiz-extra__item">Количество квадроциклов: <span class="booked-quads">1</span></li>
+                        <li class="quiz-extra__item">Количество водителей (инструкторов): <span class="booked-drivers">1</span></li>
+                    </ul>
+                </div>
+                <div class="quiz-info__item">
+                    <img src="./img/svg/icon_wheel.svg" alt="">
+                    <p>
+                        <b>Модель квадроцикла:</b>
+                    </p>
+                    <ul class="quiz-extra">
+                        <li class="quiz-extra__item">Квадроцикл CFMOTO CFORCE 1000 EPS NEW — 90 л. с.</li>
+                    </ul>
+                </div>
+                <div class="quiz-info__price">
+                    <p>Общая стоимость:</p>
+                    <p class="orange"><span class="final-cost">12 000</span>₽</p>
+                </div>
+              </div>
+              <div class="quiz-info quiz-info--3 dnone">
+                <svg width="160" height="160">
+                    <use xlink:href="./img/sprite.svg#icon__check"></use>
+                </svg>
+                <h5>Успех!</h5>
+              </div>
+            </div>
+            <div class="quiz__slide swiper-slide quiz-cards dnone">
+                <h3>ВАЖНО ЗНАТЬ!</h3>
+                <div class="quiz-cards__cards">
+                    <div class="quiz-card">
+                        <svg width="48" height="48">
+                            <use xlink:href="./img/sprite.svg#icon_adv1"></use>
+                        </svg>
+                        <div class="quiz-card__texts">
+                            <p class="quiz-card__name">ПРИБЫТИЕ</p>
+                            <p class="quiz-card__desc">Встреча за 20–30 минут до запланированного времени начала тура.</p>
+                        </div>
+                    </div>
+                    <div class="quiz-card">
+                        <svg width="48" height="48">
+                            <use xlink:href="./img/sprite.svg#icon_adv1"></use>
+                        </svg>
+                        <div class="quiz-card__texts">
+                            <p class="quiz-card__name">ИНСТРУКТАЖ</p>
+                            <p class="quiz-card__desc">Перед каждой поездкой проводится инструктаж по использованию ТС и технике вождения.</p>
+                        </div>
+                    </div>
+                    <div class="quiz-card">
+                        <svg width="48" height="48">
+                            <use xlink:href="./img/sprite.svg#icon_adv1"></use>
+                        </svg>
+                        <div class="quiz-card__texts">
+                            <p class="quiz-card__name">МАРШРУТ</p>
+                            <p class="quiz-card__desc">Время отправления и маршрут поездки могут измениться из-за преобладающих погодных условий и организационных соображений.</p>
+                        </div>
+                    </div>
+                    <div class="quiz-card">
+                        <svg width="48" height="48">
+                            <use xlink:href="./img/sprite.svg#icon_adv4"></use>
+                        </svg>
+                        <div class="quiz-card__texts">
+                            <p class="quiz-card__name">ВОЗРАСТ</p>
+                            <p class="quiz-card__desc">Техникой может управлять только человек, достигший шестнадцатилетнего возраста (имеются исключения, уточнять у администратора)</p>
+                        </div>
+                    </div>
+                    <div class="quiz-card">
+                        <svg width="48" height="48">
+                            <use xlink:href="./img/sprite.svg#icon_adv5"></use>
+                        </svg>
+                        <div class="quiz-card__texts">
+                            <p class="quiz-card__name">ОТВЕТСТВЕННОСТЬ</p>
+                            <p class="quiz-card__desc">Водитель техники несёт ответственность за своё здоровье и за причинённый транспортному средству вред.</p>
+                        </div>
+                    </div>
+                    <div class="quiz-card">
+                        <svg width="48" height="48">
+                            <use xlink:href="./img/sprite.svg#icon_adv6"></use>
+                        </svg>
+                        <div class="quiz-card__texts">
+                            <p class="quiz-card__name">БЕЗОПАСНОСТЬ</p>
+                            <p class="quiz-card__desc">Все участники подписывают договор о принятии норм и правил безопасности. Также необходимо иметь при себе паспорт или права. Лицам в алкогольном опьянении услуги не оказываются.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz-cards__verify">
+                    <div class="quiz-form__btns">
+                        <button class="quiz__close-cards btn btn--transparent" type="button">
+                            <svg width="16" height="16">
+                                <use xlink:href="./img/sprite.svg#icon_arrow"></use>
+                            </svg>
+                            Назад
+                        </button>
+                        <button class="quiz__close-cards btn" type="button">
+                            Следующий шаг
+                            <svg width="16" height="16" style="rotate:180deg;">
+                                <use xlink:href="./img/sprite.svg#icon_arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <label class="verify-label">
+                        <input type="checkbox">
+                        <span>Я все прочитал и согласен со всеми условиями и правилами</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+      <section class="gallery section">
+    <div class="gallery__container container">
+        <div class="swiper gallery__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper gallery__swiper-wrapper">
+              <!-- Slides -->
+              <img src="./img/image.webp" alt="картинка в галерее" class="swiper-slide gallery__slide">
+              <img src="./img/image.webp" alt="картинка в галерее" class="swiper-slide gallery__slide">
+              <img src="./img/image.webp" alt="картинка в галерее" class="swiper-slide gallery__slide">
+              <img src="./img/image.webp" alt="картинка в галерее" class="swiper-slide gallery__slide">
+              <img src="./img/image.webp" alt="картинка в галерее" class="swiper-slide gallery__slide">
+              <img src="./img/image.webp" alt="картинка в галерее" class="swiper-slide gallery__slide">
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination gallery__swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="gallery__btns">
+                <div class="swiper-button-prev gallery__prev">
+                    <svg width="18" height="18">
+                        <use xlink:href="./img/sprite.svg#icon_arrow"></use>
+                    </svg>
+                </div>
+                <div class="swiper-button-next gallery__next">
+                    <svg width="18" height="18" style="rotate:180deg;">
+                        <use xlink:href="./img/sprite.svg#icon_arrow"></use>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- upper block -->
+            <div class="gallery__swiper--upper"></div>
+        </div>
+    </div>
+</section>
+      <section class="cards section">
+    <div class="quiz__slide swiper-slide quiz-cards container">
+        <h2 class="page-title">ВАЖНО ЗНАТЬ!</h2>
+        <div class="quiz-cards__cards">
+            <div class="quiz-card">
+                <svg width="48" height="48">
+                    <use xlink:href="./img/sprite.svg#icon_adv1"></use>
+                </svg>
+                <div class="quiz-card__texts">
+                    <p class="quiz-card__name">ПРИБЫТИЕ</p>
+                    <p class="quiz-card__desc">Встреча за 20–30 минут до запланированного времени начала тура.</p>
+                </div>
+            </div>
+            <div class="quiz-card">
+                <svg width="48" height="48">
+                    <use xlink:href="./img/sprite.svg#icon_adv1"></use>
+                </svg>
+                <div class="quiz-card__texts">
+                    <p class="quiz-card__name">ИНСТРУКТАЖ</p>
+                    <p class="quiz-card__desc">Перед каждой поездкой проводится инструктаж по использованию ТС и технике вождения.</p>
+                </div>
+            </div>
+            <div class="quiz-card">
+                <svg width="48" height="48">
+                    <use xlink:href="./img/sprite.svg#icon_adv1"></use>
+                </svg>
+                <div class="quiz-card__texts">
+                    <p class="quiz-card__name">МАРШРУТ</p>
+                    <p class="quiz-card__desc">Время отправления и маршрут поездки могут измениться из-за преобладающих погодных условий и организационных соображений.</p>
+                </div>
+            </div>
+            <div class="quiz-card">
+                <svg width="48" height="48">
+                    <use xlink:href="./img/sprite.svg#icon_adv4"></use>
+                </svg>
+                <div class="quiz-card__texts">
+                    <p class="quiz-card__name">ВОЗРАСТ</p>
+                    <p class="quiz-card__desc">Техникой может управлять только человек, достигший шестнадцатилетнего возраста (имеются исключения, уточнять у администратора)</p>
+                </div>
+            </div>
+            <div class="quiz-card">
+                <svg width="48" height="48">
+                    <use xlink:href="./img/sprite.svg#icon_adv5"></use>
+                </svg>
+                <div class="quiz-card__texts">
+                    <p class="quiz-card__name">ОТВЕТСТВЕННОСТЬ</p>
+                    <p class="quiz-card__desc">Водитель техники несёт ответственность за своё здоровье и за причинённый транспортному средству вред.</p>
+                </div>
+            </div>
+            <div class="quiz-card">
+                <svg width="48" height="48">
+                    <use xlink:href="./img/sprite.svg#icon_adv6"></use>
+                </svg>
+                <div class="quiz-card__texts">
+                    <p class="quiz-card__name">БЕЗОПАСНОСТЬ</p>
+                    <p class="quiz-card__desc">Все участники подписывают договор о принятии норм и правил безопасности. Также необходимо иметь при себе паспорт или права. Лицам в алкогольном опьянении услуги не оказываются.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+      <section class="contacts section">
+    <div class="contacts__container container">
+        <div class="contacts__info">
+            <h2 class="page-title">Наши контакты</h2>
+            <aside>Нужны квадроциклы для незабываемого отдыха? Позвоните нам!</aside>
+            <div class="contacts__socials">
+                <p class="contacts__phone">+7 999 750-05-90</p>
+                <div class="contacts__messengers">
+                    <a href="#" class="contacts__link">
+                        <svg width="30" height="30">
+                            <use xlink:href="./img/sprite.svg#icon_wa"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="contacts__link">
+                        <svg width="26" height="21">
+                            <use xlink:href="./img/sprite.svg#icon_tg"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="contacts__item">
+                <p>Адрес:</p>
+                <p>с. Черемушки ул. Центральная 10</p>
+            </div>
+            <div class="contacts__item">
+                <p>Электронная почта</p>
+                <p>cf-travel@mail.ru</p>
+            </div>
+        </div>
+        <img class="contacts__map" src="./img/image.webp"></img>
+    </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__rights">
+      <a href="#">Политика конфиденциальности</a>
+      <aside>@ 2013 — 2024 CF-Travel | CF-Travel Все права защищены</aside>
+    </div>
+    <img src="./img/business-up.webp" alt="лого компании «Business-UP», создавшей сайт">
+  </div>
+</footer>
+
+  </div>
+</body>
+
+</html>

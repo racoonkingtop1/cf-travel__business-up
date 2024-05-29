@@ -1,0 +1,103 @@
+.contacts {
+  background-color: white;
+}
+
+.contacts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.contacts__container h2 {
+  margin-bottom: 48px;
+}
+.contacts__container aside {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.contacts__info {
+  max-width: 420px;
+}
+
+.contacts__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.contacts__phone {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.contacts__messengers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.contacts__link {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.contacts__link:first-child {
+  background-color: #29A71A;
+}
+.contacts__link:last-child {
+  background-color: #039BE5;
+}
+.contacts__link svg {
+  fill: white;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.contacts__link:hover {
+  background-color: rgba(230, 114, 5, 0.1490196078);
+}
+.contacts__link:hover svg {
+  fill: var(--orange);
+}
+
+.contacts__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 24px 0;
+}
+.contacts__item p:first-child {
+  opacity: 0.6;
+}
+
+.contacts__map {
+  max-width: 815px;
+  aspect-ratio: 815/505;
+  border-radius: 16px;
+}/*# sourceMappingURL=contacts.css.map */
